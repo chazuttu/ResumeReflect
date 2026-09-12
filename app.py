@@ -414,7 +414,7 @@ JOB DESCRIPTION:
 {jd_text}
 """
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.5,
         max_tokens=3500
@@ -1244,7 +1244,7 @@ if st.session_state.step == 3 and st.session_state.ai_data:
         with tabs[0]:
             with st.spinner("Writing cover letter..."):
                 cl = client.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
+                    model="openai/gpt-oss-120b",
                     messages=[{"role":"user","content":f"""
 Write a compelling, personalized cover letter. 3 paragraphs. Professional but human tone. No generic openers like "I am writing to express".
 Candidate summary: {data.get('summary','')}
@@ -1260,7 +1260,7 @@ Role context: {st.session_state.jd_text[:800] if st.session_state.jd_text else '
         with tabs[1]:
             with st.spinner("Building interview kit..."):
                 ik = client.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
+                    model="openai/gpt-oss-120b",
                     messages=[{"role":"user","content":f"""
 Create an interview prep kit with:
 1. TOP 5 LIKELY INTERVIEW QUESTIONS with brief answer hints based on the resume
@@ -1281,7 +1281,7 @@ Role context: {st.session_state.jd_text[:800] if st.session_state.jd_text else '
             if is_yearly:
                 with st.spinner("Rewriting LinkedIn profile..."):
                     li = client.chat.completions.create(
-                        model="llama-3.3-70b-versatile",
+                        model="openai/gpt-oss-120b",
                         messages=[{"role":"user","content":f"""
 Rewrite this person's LinkedIn profile. Provide:
 1. HEADLINE (120 chars max, keyword-rich, compelling)
