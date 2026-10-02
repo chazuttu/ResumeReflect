@@ -8,7 +8,6 @@
 
 ## What you get (free)
 - **Tailored one-page resume**: PDF and editable Word file
-- **Your links stay clickable** (LinkedIn, GitHub, projects, portfolio)
 - **ATS report**: resume optimisation score, skill match with the job, and a list of what's missing
 - **Honest by design**: it never adds skills you don't have. Missing skills are shown so you know what to learn.
 
